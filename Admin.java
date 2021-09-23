@@ -2,6 +2,7 @@ package com.ambow.entity;
 
 public class Admin {
 
+//测试
     private Integer a_id;
     private String a_account;
     private String a_pwd;
