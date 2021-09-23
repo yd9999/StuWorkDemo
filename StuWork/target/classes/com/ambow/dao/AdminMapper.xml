@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.ambow.dao.AdminMapper" >
+    <resultMap id="BaseResultMap" type="com.ambow.entity.Admin" >
+        <id column="a_id" property="a_id" jdbcType="INTEGER" />
+        <result column="a_account" property="a_account" jdbcType="VARCHAR" />
+        <result column="a_pwd" property="a_pwd" jdbcType="VARCHAR" />
+    </resultMap>
+
+    <!--管理员登录-->
+    <select id="loginDao" resultMap="BaseResultMap">
+        select * from db_admin where a_account = #{a_account} and a_pwd = #{a_pwd}
+    </select>
+
+
+</mapper>
